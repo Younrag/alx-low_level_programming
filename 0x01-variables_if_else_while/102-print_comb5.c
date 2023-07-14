@@ -21,7 +21,9 @@ int main(void)
 			p = n;
 			while (p < 58)
 			{
-				q = m + 1;
+				q = 48;
+				if (p == n)
+					q = m + 1;
 				while (q < 58)
 				{
 				putchar(n);
