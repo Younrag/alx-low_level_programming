@@ -20,8 +20,8 @@ void print_to_98(int n)
 		{
 			q = n / 10;
 			r = n % 10;
-			_putchar(q);
-			_putchar(r);
+			_putchar('0' + q);
+			_putchar('0' + r);
 			_putchar(',');
 			_putchar(' ');
 		}
