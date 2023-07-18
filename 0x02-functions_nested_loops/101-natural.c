@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * Description: computes of 3 or 5, beloww 1024
- * Return: sum of all multiple
+ * Return: 0
  */
 int main(void)
 {
@@ -16,5 +16,6 @@ int main(void)
 			sum = sum + n;
 		n++;
 	}
-	return (sum);
+	printf("%d", sum);
+	return (0);
 }
