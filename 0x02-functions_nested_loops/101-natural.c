@@ -13,7 +13,7 @@ int main(void)
 	while (n < 1024)
 	{
 		if ((n % 3) == 0 || (n % 5) == 0)
-			sum += n;
+			sum = sum + n;
 		n++;
 	}
 	return (sum);
