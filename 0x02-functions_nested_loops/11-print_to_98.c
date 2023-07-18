@@ -8,6 +8,8 @@ void print_to_98(int n)
 {
 	int q, r;
 
+	if (n > 98)
+	{
 	while (n < 99)
 	{
 		if (n < 10)
@@ -31,6 +33,15 @@ void print_to_98(int n)
 			_putchar('8');
 		}
 		n++;
+	}
+	}
+	else
+	{
+		while (n > 98)
+		{
+			printf("%d, ", n--);
+		}
+		printf("98");
 	}
 	_putchar('\n');
 }
