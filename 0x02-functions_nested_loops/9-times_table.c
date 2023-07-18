@@ -8,6 +8,7 @@ void times_table(void)
 	int n;
 	int m;
 	int p;
+	int r, q;
 
 	n = 0;
 	while (n < 10)
