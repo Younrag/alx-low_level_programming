@@ -19,6 +19,9 @@ int main(void)
 			a = a / i;
 			p = i;
 		}
+		else
+			continue;
 	}
-	printf("The largest prime is: %ld", p);
+	printf("The largest prime is: %ld\n", p);
+	return (0);
 }
