@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		money = atoi(arg[1]);
+		money = atoi(argv[1]);
 		result = 0;
 		if (money < 0)
 		{
