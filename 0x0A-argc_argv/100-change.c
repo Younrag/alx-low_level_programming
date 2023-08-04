@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 			{
 				result += money / coins[i];
 				money = money % coins[i];
-				if (money % coins[i])
+				if (money % coins[i] == 0)
 					break;
 			}
 		}
