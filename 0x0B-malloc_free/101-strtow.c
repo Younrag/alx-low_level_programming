@@ -41,7 +41,7 @@ char **strtow(char *str)
 				for (k = 0; k < n; k++)
 					free(sec[k]);
 				free(sec);
-				return (NULL)
+				return (NULL);
 			}
 			if (str[i] != ' ')
 				sec[n][m] = str[i];
