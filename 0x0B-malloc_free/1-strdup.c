@@ -8,7 +8,8 @@
  */
 char *_strdup(char *str)
 {
-	int i;
+	char *aaa;
+	int i, r = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -16,9 +17,13 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	str = malloc(sizeof(char) * (i + 1));
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if (str == NULL)
+	if (aaa == NULL)
 		return (NULL);
-	return (str);
+
+	for (r = 0; str[r]; r++)
+		aaa[r] = str[r];
+
+	return (aaa);
 }
