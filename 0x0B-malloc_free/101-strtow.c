@@ -10,10 +10,9 @@
 char **strtow(char *str)
 {
 	char **sec;
-	char *words;
 	int j, k, n, m, i = 0, count = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 	while (*str == ' ')
 		str++;
