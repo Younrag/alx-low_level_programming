@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	len = len1 + len2 + 1;
@@ -57,4 +56,3 @@ int main(int argc, char *argv[])
 	free(result);
 	return (0);
 }
-
