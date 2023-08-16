@@ -7,29 +7,30 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2;
+	char *operator;
 
-	num1 = atoi(argv[0]);
-	num2 = atoi(argv[2]);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	operator = argv[2]
 
-	if (argc != 3)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[1] != '+' && argv[1] != '-' && argv[1] != '*' && argv[1] != '/' && argv[1] != '%')
+	if (argv[2] != '+' && argv[2] != '-' && argv[2] != '*' && argv[2] != '/' && argv[2] != '%')
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((argv[1] == '/' || argv[1] == '%') && (argv[2] == '0'))
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
-	result = get_op_func(argv[1])(num1, num2);
-	printf("%d", result);
+	printf("%d\n", get_op_func(operator)(num1, num2));
 	return (0);
 }
