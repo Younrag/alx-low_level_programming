@@ -23,12 +23,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[2] != '+' &&
+	if ((*argv[2] != '+' &&
 			*argv[2] != '-' &&
 			*argv[2] != '*' &&
 			*argv[2] != '/' &&
-			*argv[2] != '%' ||
-			op[1] != '\0')
+			*argv[2] != '%') ||
+			operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
