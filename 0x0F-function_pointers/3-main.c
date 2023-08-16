@@ -14,19 +14,19 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	operator = argv[2]
+	operator = argv[2];
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] != '+' && argv[2] != '-' && argv[2] != '*' && argv[2] != '/' && argv[2] != '%')
+	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((argv[1] == '/' || argv[1] == '%') && (argv[2] == '0'))
+	if ((*argv[2] == '/' || *argv[2] == '%') && (*argv[2] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
