@@ -3,6 +3,8 @@
 /**
  * main - Entry main
  * Description: calcule with five operators
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: 0
  */
@@ -21,7 +23,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%')
+	if (*argv[2] != '+' &&
+			*argv[2] != '-' &&
+			*argv[2] != '*' &&
+			*argv[2] != '/' &&
+			*argv[2] != '%')
 	{
 		printf("Error\n");
 		exit(99);
