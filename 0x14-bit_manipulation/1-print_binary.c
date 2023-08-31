@@ -27,11 +27,11 @@ void print_binary(unsigned long int n)
 	unsigned long int result = 0, r;
 	int i;
 
-	while (n != 0)
+	while (n > 0)
 	{
 		r = 0;
 		i = 0;
-		while (r <= n)
+		while (r < n)
 		{
 			r = _power(2, i);
 			if (r > n)
