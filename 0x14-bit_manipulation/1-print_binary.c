@@ -1,46 +1,26 @@
 #include "main.h"
 
 /**
- * _power - calculate power of number
- * @a: base
- * @n: power
- *
- * Return: a power n
- */
-unsigned long int _power(unsigned long int a, int n)
-{
-	unsigned long int b = 1;
-
-	while (n > 0)
-	{
-		b *= a;
-		n--;
-	}
-	return (b);
-}
-/**
  * print_binary -  prints the binary representation of a number.
- * @n: integer to covert
+ * @n: integer to convert
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int result = 0, r;
-	int i;
+	int i, count = 0;
+	unsigned long int current;
 
-	while (n > 0)
+	for (i = 63; i >= 0; i--)
 	{
-		r = 0;
-		i = 0;
-		while (r < n)
+		current = n >> i;
+
+		if (current & 1)
 		{
-			r = _power(2, i);
-			if (r > n)
-				i--;
-			else if (r < n)
-				i++;
+			_putchar('1');
+			count++;
 		}
-		result += _power(10, i);
-		n -= _power(2, i);
+		else if (count)
+			_putchar('0');
 	}
-	printf("%lu", result);
+	if (!count)
+		_putchar('0');
 }
