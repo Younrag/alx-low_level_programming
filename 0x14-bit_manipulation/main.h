@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _power(int a, int n);
+unsigned long int _power(unsigned long int a, int n);
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
 
 #endif
