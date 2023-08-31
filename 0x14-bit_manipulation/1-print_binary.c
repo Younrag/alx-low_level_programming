@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * _power - calculate power of number
+ * @a: base
+ * @n: power
+ *
+ * Return: a power n
+ */
+unsigned long int _power(unsigned long int a, int n)
+{
+	unsigned long int b = 1;
+
+	while (n > 0)
+	{
+		b *= a;
+		n--;
+	}
+	return (b);
+}
+/**
  * print_binary -  prints the binary representation of a number.
  * @n: integer to covert
  */
