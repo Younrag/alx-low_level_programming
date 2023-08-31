@@ -8,9 +8,9 @@
  *
  * Return: a power n
  */
-int _power(int a, int n)
+unsigned long int _power(unsigned long int a, int n)
 {
-	int b = 1;
+	unsigned long int b = 1;
 
 	while (n > 0)
 	{
