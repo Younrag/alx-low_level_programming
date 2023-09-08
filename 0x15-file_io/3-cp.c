@@ -33,11 +33,11 @@ int main(int argc, char **argv)
 	wr = write(fd2, buffer, rd);
 	if (fd2 == -1 || wr == -1)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
-	c1 = close(fd1);
-	c2 = close(fd2);
-	if (c1 == -1)
+	fd1 = close(fd1);
+	fd2 = close(fd2);
+	if (fd1)
 		dprintf(2, "Error: Can't close fd %d\n", fd1), exit(100);
-	if (c2 == -1)
+	if (fd2)
 		dprintf(2, "Error: Can't close fd %d\n", fd2), exit(100);
 
 	return (0);
