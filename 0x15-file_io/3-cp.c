@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fd1, fd2, rd, wr, c1, c2;
+	int fd1, fd2, rd, wr;
 	char *buffer;
 
 	if (argc != 3)
