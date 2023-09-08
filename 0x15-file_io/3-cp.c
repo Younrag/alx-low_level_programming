@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fd1, fd2, rd, wr;
+	int fd1, fd2, rd, wr, c1, c2;
 	char *buffer;
 
 	if (argc != 3)
@@ -33,11 +33,11 @@ int main(int argc, char **argv)
 	wr = write(fd2, buffer, rd);
 	if (fd2 == -1 || wr == -1)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
-	fd1 = close(fd1);
-	fd2 = close(fd2);
-	if (fd1 == -1)
+	c1 = close(fd1);
+	c2 = close(fd2);
+	if (c1 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", fd1), exit(100);
-	if (fd2 == -1)
+	if (c2 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", fd2), exit(100);
 
 	return (0);
