@@ -27,12 +27,16 @@ int main(int argc, char **argv)
 
 	fd1 = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	rd = read(fd1, buffer, 1024);
-	if (fd1 == -1 || rd == -1)
+	if (fd1 == -1)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	wr = write(fd2, buffer, rd);
-	if (fd2 == -1 || wr == -1)
+	if (fd2 == -1)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
+	while ((rd = read(fd1, buffer, 1024)) > 0)
+		if (write(fd2, buffer, rd) != rd)
+			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
+	if (rd == -1)
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
+
 	fd1 = close(fd1);
 	fd2 = close(fd2);
 	if (fd1)
