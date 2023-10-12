@@ -1,7 +1,7 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 /**
  * print_dlistint - prints all the elements of a dlistint_t list.
  * @h: pointer to dlinked list
@@ -10,19 +10,17 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int count = 0;
+        dlistint_t *current;
+        size_t count = 0;
 
-	if (h == NULL)
-		return (0);
-
-	while (h->prev)
-		h = h->prev;
-
-	while (h)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count ++;
-	}
-	return (count);
+        current = h;
+        if (current == NULL)
+            return (0);
+        while (current)
+        {
+                printf("%d\n", current->n);
+                current = current->next;
+                count += 1;
+        }
+        return (count);
 }
