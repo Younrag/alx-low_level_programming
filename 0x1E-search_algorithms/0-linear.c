@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
+
 /**
  * linear_search - searches for a value in an array of integers
  * using the Linear search algorithm
@@ -12,7 +11,6 @@
 int linear_search(int *array, size_t size, int value)
 {
 	size_t i;
-	int index;
 
 	if (array == NULL)
 		return (-1);
@@ -21,10 +19,7 @@ int linear_search(int *array, size_t size, int value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 		if (array[i] == value)
-		{
-			index = i;
-			return (index);
-		}
+			return (i);
 	}
 
 	return (-1);
