@@ -6,7 +6,10 @@
  * @array: pointer to the first element to search in
  * @size: number of elements in array
  * @value: value to search
+ *
  * Return: index value if exist, otherwise -1
+ *
+ * Description: Prints a value every time it is compared in the array.
  */
 int linear_search(int *array, size_t size, int value)
 {
